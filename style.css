@@ -1,0 +1,57 @@
+/* Style for the header container */
+.header {
+    display: flex;
+    background-color: #f8f8f8;
+    justify-content: space-between;
+    padding: 10px; /* Add padding for better spacing */
+    border: 1px solid #cfb209; /* Add a subtle border */
+  }
+  
+  /* Styling the title image */
+  img {
+    height: 150; /* Limit the image height */
+  }
+  
+  /* Removing default list styling */
+  .nav-items > ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Styling the navigation items */
+  .nav-items > ul > li {
+    margin-right: 15px; /* Add margin between list items */
+    padding: 10px;
+    font-family: 'Arial', sans-serif; /* Use a common sans-serif font */
+    font-weight:   bold ;
+    color: #000000a8; /* Set the text color */
+    cursor: pointer;
+  }
+  
+  /* Hover effect on navigation items */
+  .nav-items > ul > li:hover {
+    color: #c51230; /* Change color on hover */
+  }
+  
+
+  .logo{
+    width: 100px;
+  }
+
+  .card{
+    width: 200px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .card>img{
+    width: 100%;
+  }
+
+  .restaurant-list{
+    display: flex ;
+    flex-wrap:wrap;
+  }
