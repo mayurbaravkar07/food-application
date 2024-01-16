@@ -12,6 +12,11 @@ SPA===>single page application---> in this routing we built the client side rout
     outlet will contain the all the children elements and we should 
     <Outlet/> in between the header and the footer'
 
+
+    //Dynamic Routing ------->{
+        
+    }
+
 }
 
 */
