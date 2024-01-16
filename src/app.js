@@ -4,6 +4,8 @@ import "../style.css";
 import { Title, HeaderComponent } from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
+import { createBrowserRouter} from "react-router-dom";
+
 
 //Main App
 const AppLayout = () => {
@@ -15,6 +17,10 @@ const AppLayout = () => {
     </>
   );
 };
+
+
+
+
 
 const rootElement = document.getElementById("root");
 if (rootElement) {

@@ -1,0 +1,10 @@
+
+-useEffext(fn,[])===> it will called once after the primary render
+-useEffext(fn,[searchText])===> it will called everytime after the any changes in the searchText
+-useEffext(fn)===> it will called  everytime  after the each render
+-Never create the component inside the compoent
+-Never create the useState() inside the if-else
+-Never create the useState() inside the for -loop
+-Never declare the state varibales outside the functionsl componenent
+-We can create more than one useEffect()
+-
