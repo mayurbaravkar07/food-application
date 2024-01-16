@@ -1,0 +1,18 @@
+/*
+SPA===>single page application---> in this routing we built the client side routing and the when we are clicking on the about us page then 
+                it should not do any network call rather it should go to about us page without making any n/w call
+                we use  <Link/> tag from the react-roter-dom
+     Types of routing===>
+    1] client side routing===>
+     2] server side routing ==>
+         localhost:1234/aboutus
+
+**Nested Routes ==>{
+    we have to create the outlet and the react-router-dom gives us the Outlet so we can create the 
+    outlet will contain the all the children elements and we should 
+    <Outlet/> in between the header and the footer'
+
+}
+
+*/
+

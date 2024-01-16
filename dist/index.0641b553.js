@@ -2959,35 +2959,84 @@ var _bodyDefault = parcelHelpers.interopDefault(_body);
 var _footer = require("./components/Footer");
 var _footerDefault = parcelHelpers.interopDefault(_footer);
 var _reactRouterDom = require("react-router-dom");
+var _about = require("./components/About");
+var _aboutDefault = parcelHelpers.interopDefault(_about);
+var _contact = require("./components/Contact");
+var _contactDefault = parcelHelpers.interopDefault(_contact);
+var _error = require("./components/Error");
+var _errorDefault = parcelHelpers.interopDefault(_error);
 //Main App
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _header.HeaderComponent), {}, void 0, false, {
                 fileName: "src/app.js",
-                lineNumber: 14,
+                lineNumber: 18,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/app.js",
-                lineNumber: 15,
-                columnNumber: 7
+                lineNumber: 19,
+                columnNumber: 6
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "src/app.js",
-                lineNumber: 16,
+                lineNumber: 20,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
 _c = AppLayout;
+const appRouter = (0, _reactRouterDom.createBrowserRouter)([
+    {
+        path: "/",
+        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
+            fileName: "src/app.js",
+            lineNumber: 30,
+            columnNumber: 13
+        }, undefined),
+        children: [
+            {
+                path: "/",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 34,
+                    columnNumber: 17
+                }, undefined)
+            },
+            {
+                path: "/about",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 38,
+                    columnNumber: 17
+                }, undefined)
+            },
+            {
+                path: "/contact",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 42,
+                    columnNumber: 17
+                }, undefined)
+            }
+        ],
+        errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
+            fileName: "src/app.js",
+            lineNumber: 45,
+            columnNumber: 18
+        }, undefined)
+    }
+]);
 const rootElement = document.getElementById("root");
 if (rootElement) {
     const root = (0, _clientDefault.default).createRoot(rootElement);
-    root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
+    root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterProvider), {
+        router: appRouter
+    }, void 0, false, {
         fileName: "src/app.js",
-        lineNumber: 28,
+        lineNumber: 62,
         columnNumber: 15
     }, undefined));
 } else console.error("Root element not found");
@@ -2999,7 +3048,7 @@ $RefreshReg$(_c, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","../style.css":"dRy26","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","../style.css":"dRy26","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","./components/About":"9R1Eu","./components/Contact":"cgAOG","./components/Error":"kvula"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27198,6 +27247,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Title", ()=>Title);
 parcelHelpers.export(exports, "HeaderComponent", ()=>HeaderComponent);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
 const Title = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
         src: "https://files.yappe.in/place/small/the-food-villa-5873411.webp",
@@ -27208,7 +27258,7 @@ const Title = ()=>{
         }
     }, void 0, false, {
         fileName: "src/components/Header.js",
-        lineNumber: 3,
+        lineNumber: 5,
         columnNumber: 5
     }, undefined);
 };
@@ -27219,7 +27269,7 @@ const HeaderComponent = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 14,
+                lineNumber: 16,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27227,48 +27277,69 @@ const HeaderComponent = ()=>{
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Home"
-                        }, void 0, false, {
-                            fileName: "src/components/Header.js",
-                            lineNumber: 17,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "About"
-                        }, void 0, false, {
-                            fileName: "src/components/Header.js",
-                            lineNumber: 18,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Contact"
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/",
+                                children: "Home"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 19,
+                                columnNumber: 13
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
                             lineNumber: 19,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/about",
+                                children: "About"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 20,
+                                columnNumber: 15
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 20,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/contact",
+                                children: "contact"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 21,
+                                columnNumber: 15
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 21,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Cart"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 20,
+                            lineNumber: 22,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 16,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 15,
+                lineNumber: 17,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 13,
+        lineNumber: 15,
         columnNumber: 5
     }, undefined);
 }; // export default can only export one thing
@@ -27283,7 +27354,7 @@ $RefreshReg$(_c1, "HeaderComponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27451,323 +27522,7 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}],"8yaV8":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0606.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _restaurantCard = require("./RestaurantCard");
-var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
-var _contant = require("../contant");
-var _shimmerUI = require("./ShimmerUI");
-var _shimmerUIDefault = parcelHelpers.interopDefault(_shimmerUI);
-var _s = $RefreshSig$();
-const Body = ()=>{
-    _s();
-    const [restaurant, setRestaurant] = (0, _react.useState)([]); // Assuming fetched data will be an array
-    const [searchText, setSearchText] = (0, _react.useState)("");
-    const [filteredRestaurant, setfilteredRestaurant] = (0, _react.useState)([]);
-    (0, _react.useEffect)(()=>{
-        fetchData();
-    }, []); // Empty dependency array ensures it runs once after mounting
-    async function filterData(searchText, restaurant) {
-        const filteredRestaurant = restaurant.filter((res)=>res.name.toLowerCase().includes(searchText.toLowerCase()));
-        return filteredRestaurant;
-    }
-    async function fetchData() {
-        try {
-            const response = await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=18.1519403&lng=74.5697617&page_type=DESKTOP_WEB_LISTING");
-            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-            const jsonData = await response.json();
-            console.log("API Response:", jsonData);
-            const restaurantsData = jsonData?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle?.restaurants?.map((restaurant)=>restaurant.info);
-            // Update state with the array of restaurants
-            setRestaurant(restaurantsData || []);
-            setfilteredRestaurant(restaurantsData || []);
-        } catch (error) {
-            console.error("Error fetching data:", error);
-        }
-    }
-    const handleSearch = async ()=>{
-        const data = await filterData(searchText, restaurant);
-        setfilteredRestaurant(data);
-    };
-    //Condtional  Rendereing 
-    //if restaturant is empty ==> shimmer ui
-    //if restaurant has the  data then==> actual UI
-    //
-    //early return 
-    return restaurant.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerUIDefault.default), {}, void 0, false, {
-        fileName: "src/components/Body.js",
-        lineNumber: 60,
-        columnNumber: 34
-    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "searchContainer",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        type: "text",
-                        className: "search-input",
-                        placeholder: "search ",
-                        value: searchText,
-                        onChange: (e)=>{
-                            setSearchText(e.target.value);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 63,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "search-btn",
-                        onClick: handleSearch,
-                        children: "Search"
-                    }, void 0, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 72,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Body.js",
-                lineNumber: 62,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "restaurant-list",
-                children: filteredRestaurant.map((restaurantData, index)=>/*#__PURE__*/ (0, _react.createElement)((0, _restaurantCardDefault.default), {
-                        ...restaurantData,
-                        key: index,
-                        __source: {
-                            fileName: "src/components/Body.js",
-                            lineNumber: 83,
-                            columnNumber: 11
-                        },
-                        __self: undefined
-                    }))
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 80,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true);
-};
-_s(Body, "z+nvxLkKP4KKjxZe8vN/EcKRJZk=");
-_c = Body;
-exports.default = Body;
-var _c;
-$RefreshReg$(_c, "Body");
-
-  $parcel$ReactRefreshHelpers$0606.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./RestaurantCard":"bMboU","../contant":"2zNbZ","./ShimmerUI":"7lsvJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bMboU":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$ffb1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ffb1.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _contant = require("../contant");
-const RestaurantCard = ({ name, cuisines, cloudinaryImageId, avgRating })=>{
-    const imageUrl = cloudinaryImageId ? `${0, _contant.ImageUrl}${cloudinaryImageId}` : null;
-    // Check if essential information is available
-    if (!imageUrl || !name) {
-        console.error("Invalid data for restaurant:", {
-            name,
-            imageUrl
-        });
-        return null; // Skip rendering this card
-    }
-    console.log("Image URL:", imageUrl);
-    console.log("Restaurant Name:", name);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "card",
-        children: [
-            imageUrl && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: imageUrl,
-                alt: "Image not found"
-            }, void 0, false, {
-                fileName: "src/components/RestaurantCard.js",
-                lineNumber: 17,
-                columnNumber: 20
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: name
-            }, void 0, false, {
-                fileName: "src/components/RestaurantCard.js",
-                lineNumber: 18,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: cuisines?.join(",")
-            }, void 0, false, {
-                fileName: "src/components/RestaurantCard.js",
-                lineNumber: 19,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: avgRating
-            }, void 0, false, {
-                fileName: "src/components/RestaurantCard.js",
-                lineNumber: 20,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/RestaurantCard.js",
-        lineNumber: 16,
-        columnNumber: 5
-    }, undefined);
-};
-_c = RestaurantCard;
-exports.default = RestaurantCard;
-var _c;
-$RefreshReg$(_c, "RestaurantCard");
-
-  $parcel$ReactRefreshHelpers$ffb1.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","../contant":"2zNbZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2zNbZ":[function(require,module,exports) {
-///Here  we put the  all  the hardCoded Data
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "ImageUrl", ()=>ImageUrl);
-parcelHelpers.export(exports, "restaurantObject", ()=>restaurantObject);
-const ImageUrl = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-const restaurantObject = [
-    {
-        adTrackingId: "cid=10507176~p=1~eid=0000018d-10b2-b581-5648-c44c00b6015d~srvts=1705382163841~45995",
-        aggregatedDiscountInfoV3: {
-            header: "\u20B9120 OFF",
-            subHeader: "ABOVE \u20B9199",
-            discountTag: "FLAT DEAL"
-        },
-        areaName: "Baramati",
-        availability: {
-            nextCloseTime: "2024-01-16 21:30:00",
-            opened: true
-        },
-        avgRating: 4.5,
-        avgRatingString: "4.5",
-        badges: {},
-        badgesV2: {
-            entityBadges: {}
-        },
-        cloudinaryImageId: "d1b72eaf2a273dee7610bc91cd2694fc",
-        costForTwo: "\u20B920 for two",
-        cuisines: [
-            "South Indian",
-            "Beverages"
-        ],
-        differentiatedUi: {
-            displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-            differentiatedUiMediaDetails: {}
-        },
-        displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-        id: "705827",
-        isOpen: true,
-        locality: "Vidhya Corner Bhigwan Road",
-        name: "Naadbramha Idli",
-        parentId: "251339",
-        promoted: true,
-        restaurantOfferPresentationInfo: {},
-        reviewsSummary: {},
-        sla: {
-            deliveryTime: 34,
-            lastMileTravel: 5.5,
-            serviceability: "SERVICEABLE",
-            slaString: "34 mins",
-            lastMileTravelString: "5.5 km"
-        },
-        totalRatingsString: "7",
-        type: "F",
-        veg: true
-    }
-];
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7lsvJ":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$9faf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9faf.prelude(module);
-
-try {
-// Shimmer is the UI loaded when we are loading something and when we want to show the layout of the component
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Shimmer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "restaurant-list",
-        children: Array(16).fill("").map((e, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
-            }, index, false, {
-                fileName: "src/components/ShimmerUI.js",
-                lineNumber: 6,
-                columnNumber: 11
-            }, undefined))
-    }, void 0, false, {
-        fileName: "src/components/ShimmerUI.js",
-        lineNumber: 4,
-        columnNumber: 7
-    }, undefined);
-};
-_c = Shimmer;
-exports.default = Shimmer;
-var _c;
-$RefreshReg$(_c, "Shimmer");
-
-  $parcel$ReactRefreshHelpers$9faf.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bc7c.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Footer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-        children: "This Footer"
-    }, void 0, false, {
-        fileName: "src/components/Footer.js",
-        lineNumber: 2,
-        columnNumber: 10
-    }, undefined);
-};
-_c = Footer;
-exports.default = Footer;
-var _c;
-$RefreshReg$(_c, "Footer");
-
-  $parcel$ReactRefreshHelpers$bc7c.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
+},{"7422ead32dcc1e6b":"786KC"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.21.2
  *
@@ -34243,6 +33998,465 @@ function persistAppliedTransitions(_window, transitions) {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["3lsJq","1xC6H","bNKaB"], "bNKaB", "parcelRequire2720")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8yaV8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0606.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _restaurantCard = require("./RestaurantCard");
+var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
+var _contant = require("../contant");
+var _shimmerUI = require("./ShimmerUI");
+var _shimmerUIDefault = parcelHelpers.interopDefault(_shimmerUI);
+var _s = $RefreshSig$();
+const Body = ()=>{
+    _s();
+    const [restaurant, setRestaurant] = (0, _react.useState)([]); // Assuming fetched data will be an array
+    const [searchText, setSearchText] = (0, _react.useState)("");
+    const [filteredRestaurant, setfilteredRestaurant] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        fetchData();
+    }, []); // Empty dependency array ensures it runs once after mounting
+    async function filterData(searchText, restaurant) {
+        const filteredRestaurant = restaurant.filter((res)=>res.name.toLowerCase().includes(searchText.toLowerCase()));
+        return filteredRestaurant;
+    }
+    async function fetchData() {
+        try {
+            const response = await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=18.1519403&lng=74.5697617");
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+            const jsonData = await response.json();
+            console.log("API Response:", jsonData);
+            const restaurantsData = jsonData?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle?.restaurants?.map((restaurant)=>restaurant.info);
+            // Update state with the array of restaurants
+            setRestaurant(restaurantsData || []);
+            setfilteredRestaurant(restaurantsData || []);
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        }
+    }
+    const handleSearch = async ()=>{
+        const data = await filterData(searchText, restaurant);
+        setfilteredRestaurant(data);
+    };
+    //Condtional  Rendereing 
+    //if restaturant is empty ==> shimmer ui
+    //if restaurant has the  data then==> actual UI
+    //
+    //early return 
+    return restaurant.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerUIDefault.default), {}, void 0, false, {
+        fileName: "src/components/Body.js",
+        lineNumber: 60,
+        columnNumber: 34
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "searchContainer",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        className: "search-input",
+                        placeholder: "search ",
+                        value: searchText,
+                        onChange: (e)=>{
+                            setSearchText(e.target.value);
+                        }
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 63,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "search-btn",
+                        onClick: handleSearch,
+                        children: "Search"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 72,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 62,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "restaurant-list",
+                children: filteredRestaurant.map((restaurantData, index)=>/*#__PURE__*/ (0, _react.createElement)((0, _restaurantCardDefault.default), {
+                        ...restaurantData,
+                        key: index,
+                        __source: {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 83,
+                            columnNumber: 11
+                        },
+                        __self: undefined
+                    }))
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 80,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(Body, "z+nvxLkKP4KKjxZe8vN/EcKRJZk=");
+_c = Body;
+exports.default = Body;
+var _c;
+$RefreshReg$(_c, "Body");
+
+  $parcel$ReactRefreshHelpers$0606.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./RestaurantCard":"bMboU","../contant":"2zNbZ","./ShimmerUI":"7lsvJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bMboU":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ffb1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ffb1.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _contant = require("../contant");
+const RestaurantCard = ({ name, cuisines, cloudinaryImageId, avgRating })=>{
+    const imageUrl = cloudinaryImageId ? `${0, _contant.ImageUrl}${cloudinaryImageId}` : null;
+    // Check if essential information is available
+    if (!imageUrl || !name) {
+        console.error("Invalid data for restaurant:", {
+            name,
+            imageUrl
+        });
+        return null; // Skip rendering this card
+    }
+    console.log("Image URL:", imageUrl);
+    console.log("Restaurant Name:", name);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
+        children: [
+            imageUrl && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: imageUrl,
+                alt: "Image not found"
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 17,
+                columnNumber: 20
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: name
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 18,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: cuisines?.join(",")
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 19,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: avgRating
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 20,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/RestaurantCard.js",
+        lineNumber: 16,
+        columnNumber: 5
+    }, undefined);
+};
+_c = RestaurantCard;
+exports.default = RestaurantCard;
+var _c;
+$RefreshReg$(_c, "RestaurantCard");
+
+  $parcel$ReactRefreshHelpers$ffb1.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../contant":"2zNbZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2zNbZ":[function(require,module,exports) {
+///Here  we put the  all  the hardCoded Data
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ImageUrl", ()=>ImageUrl);
+parcelHelpers.export(exports, "restaurantObject", ()=>restaurantObject);
+const ImageUrl = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+const restaurantObject = [
+    {
+        adTrackingId: "cid=10507176~p=1~eid=0000018d-10b2-b581-5648-c44c00b6015d~srvts=1705382163841~45995",
+        aggregatedDiscountInfoV3: {
+            header: "\u20B9120 OFF",
+            subHeader: "ABOVE \u20B9199",
+            discountTag: "FLAT DEAL"
+        },
+        areaName: "Baramati",
+        availability: {
+            nextCloseTime: "2024-01-16 21:30:00",
+            opened: true
+        },
+        avgRating: 4.5,
+        avgRatingString: "4.5",
+        badges: {},
+        badgesV2: {
+            entityBadges: {}
+        },
+        cloudinaryImageId: "d1b72eaf2a273dee7610bc91cd2694fc",
+        costForTwo: "\u20B920 for two",
+        cuisines: [
+            "South Indian",
+            "Beverages"
+        ],
+        differentiatedUi: {
+            displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            differentiatedUiMediaDetails: {}
+        },
+        displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        id: "705827",
+        isOpen: true,
+        locality: "Vidhya Corner Bhigwan Road",
+        name: "Naadbramha Idli",
+        parentId: "251339",
+        promoted: true,
+        restaurantOfferPresentationInfo: {},
+        reviewsSummary: {},
+        sla: {
+            deliveryTime: 34,
+            lastMileTravel: 5.5,
+            serviceability: "SERVICEABLE",
+            slaString: "34 mins",
+            lastMileTravelString: "5.5 km"
+        },
+        totalRatingsString: "7",
+        type: "F",
+        veg: true
+    }
+];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7lsvJ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9faf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9faf.prelude(module);
+
+try {
+// Shimmer is the UI loaded when we are loading something and when we want to show the layout of the component
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Shimmer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "restaurant-list",
+        children: Array(16).fill("").map((e, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, index, false, {
+                fileName: "src/components/ShimmerUI.js",
+                lineNumber: 6,
+                columnNumber: 11
+            }, undefined))
+    }, void 0, false, {
+        fileName: "src/components/ShimmerUI.js",
+        lineNumber: 4,
+        columnNumber: 7
+    }, undefined);
+};
+_c = Shimmer;
+exports.default = Shimmer;
+var _c;
+$RefreshReg$(_c, "Shimmer");
+
+  $parcel$ReactRefreshHelpers$9faf.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bc7c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Footer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+        children: "This Footer"
+    }, void 0, false, {
+        fileName: "src/components/Footer.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Footer;
+exports.default = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+
+  $parcel$ReactRefreshHelpers$bc7c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9R1Eu":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5b98 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5b98.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const About = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "About us Page "
+            }, void 0, false, {
+                fileName: "src/components/About.js",
+                lineNumber: 4,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "This is the Namasate React Live Course Course  Chapter 9 and am learning how to define routes in the application"
+            }, void 0, false, {
+                fileName: "src/components/About.js",
+                lineNumber: 5,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/About.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, undefined);
+};
+_c = About;
+exports.default = About;
+var _c;
+$RefreshReg$(_c, "About");
+
+  $parcel$ReactRefreshHelpers$5b98.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cgAOG":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ee46 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ee46.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Contact = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h", {
+            children: "This is Contact us page "
+        }, void 0, false, {
+            fileName: "src/components/Contact.js",
+            lineNumber: 5,
+            columnNumber: 4
+        }, undefined)
+    }, void 0, false);
+};
+_c = Contact;
+exports.default = Contact;
+var _c;
+$RefreshReg$(_c, "Contact");
+
+  $parcel$ReactRefreshHelpers$ee46.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kvula":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0ba4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0ba4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
+const Error = ()=>{
+    _s();
+    const err = (0, _reactRouterDom.useRouteError)();
+    console.log(err);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Oops.. Something went wrong........."
+            }, void 0, false, {
+                fileName: "src/components/Error.js",
+                lineNumber: 8,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "Something went wrong"
+            }, void 0, false, {
+                fileName: "src/components/Error.js",
+                lineNumber: 9,
+                columnNumber: 10
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: err.data
+            }, void 0, false, {
+                fileName: "src/components/Error.js",
+                lineNumber: 10,
+                columnNumber: 10
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: err.status + ":" + err.statusText
+            }, void 0, false, {
+                fileName: "src/components/Error.js",
+                lineNumber: 11,
+                columnNumber: 10
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Error.js",
+        lineNumber: 7,
+        columnNumber: 5
+    }, undefined);
+};
+_s(Error, "U5GmGaAmh0j0MVy+E8WdBnjlm7s=", false, function() {
+    return [
+        (0, _reactRouterDom.useRouteError)
+    ];
+});
+_c = Error;
+exports.default = Error;
+var _c;
+$RefreshReg$(_c, "Error");
+
+  $parcel$ReactRefreshHelpers$0ba4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}]},["3lsJq","1xC6H","bNKaB"], "bNKaB", "parcelRequire2720")
 
 //# sourceMappingURL=index.0641b553.js.map

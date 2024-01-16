@@ -23,7 +23,7 @@ const Body = () => {
     return filteredRestaurant;
   }async function fetchData() {
     try {
-      const response = await fetch('https://www.swiggy.com/mapi/homepage/getCards?lat=18.1519403&lng=74.5697617&page_type=DESKTOP_WEB_LISTING');
+      const response = await fetch('https://www.swiggy.com/mapi/homepage/getCards?lat=18.1519403&lng=74.5697617');
   
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
