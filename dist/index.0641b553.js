@@ -34038,6 +34038,7 @@ var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
 var _contant = require("../contant");
 var _shimmerUI = require("./ShimmerUI");
 var _shimmerUIDefault = parcelHelpers.interopDefault(_shimmerUI);
+var _helper = require("../utils/helper");
 var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
@@ -34047,10 +34048,6 @@ const Body = ()=>{
     (0, _react.useEffect)(()=>{
         fetchData();
     }, []); // Empty dependency array ensures it runs once after mounting
-    async function filterData(searchText, restaurant) {
-        const filteredRestaurant = restaurant.filter((res)=>res.name.toLowerCase().includes(searchText.toLowerCase()));
-        return filteredRestaurant;
-    }
     async function fetchData() {
         try {
             const response = await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=18.1519403&lng=74.5697617");
@@ -34066,7 +34063,7 @@ const Body = ()=>{
         }
     }
     const handleSearch = async ()=>{
-        const data = await filterData(searchText, restaurant);
+        const data = await (0, _helper.filterData)(searchText, restaurant);
         setfilteredRestaurant(data);
     };
     //Condtional  Rendereing 
@@ -34076,7 +34073,7 @@ const Body = ()=>{
     //early return 
     return restaurant.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerUIDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 60,
+        lineNumber: 57,
         columnNumber: 34
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
@@ -34093,7 +34090,7 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 63,
+                        lineNumber: 60,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34102,13 +34099,13 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 72,
+                        lineNumber: 69,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 62,
+                lineNumber: 59,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34118,14 +34115,14 @@ const Body = ()=>{
                         key: index,
                         __source: {
                             fileName: "src/components/Body.js",
-                            lineNumber: 83,
+                            lineNumber: 80,
                             columnNumber: 11
                         },
                         __self: undefined
                     }))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 80,
+                lineNumber: 77,
                 columnNumber: 7
             }, undefined)
         ]
@@ -34142,7 +34139,7 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./RestaurantCard":"bMboU","../contant":"2zNbZ","./ShimmerUI":"7lsvJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bMboU":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./RestaurantCard":"bMboU","../contant":"2zNbZ","./ShimmerUI":"7lsvJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/helper":"3GF3D"}],"bMboU":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ffb1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -34309,7 +34306,16 @@ $RefreshReg$(_c, "Shimmer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3GF3D":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "filterData", ()=>filterData);
+async function filterData(searchText, restaurant) {
+    const filteredRestaurant = restaurant.filter((res)=>res.name.toLowerCase().includes(searchText.toLowerCase()));
+    return filteredRestaurant;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8pPOA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -34610,6 +34616,6 @@ exports.default = ProfileC;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}]},["3lsJq","1xC6H","bNKaB"], "bNKaB", "parcelRequire2720")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["3lsJq","1xC6H","bNKaB"], "bNKaB", "parcelRequire2720")
 
 //# sourceMappingURL=index.0641b553.js.map

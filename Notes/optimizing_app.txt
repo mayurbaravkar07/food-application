@@ -1,0 +1,55 @@
+1-Building own Hooks
+    Why --> Readability ,
+                   Reusability,
+                  Modularity , -----> Brokendown piece in small unit thst have single responsibility to the certain task
+                  Sepration of Concerns ,
+                  Maintainability,
+                  testable
+
+
+-Utility is folder where we keep all code that helps us to do work 
+
+-Whenever we  add the event listener in our app we should clear that event listener when we are going outside of our component
+
+Bundling---->
+    -Parcel is Bundler with all other features it's primarily bundles the things together and return the only one .js file bundled together
+        but our application might need lots of components when we bundles so many compnent together our files becomet the fatty 
+        and it will make the application much slower.....
+        
+        solution ===> 
+                                    -Chunking or 
+                                    -Code Splitting or 
+                                    -Dynamic Buddling or
+                                    -Lazzy Loading or 
+                                    - On Demand Loading or 
+                                    -Dynamic Import 
+                                    ***this are all same terms with different names**** 
+
+        we breakdown code into chunks or in the bundles ==> 
+        By doing the logical Bundling we should load only the componet which is demanded by the user not the all components
+        
+        How ===> By react give  us lazy() function it will take the calllback function  where we should import the out component at the time of the importing in main app
+                            we should lazy load it while importing 
+
+                            const Bundle=lazy(()=>import("path_to_component ));
+
+                            Now our main file in the which bundled by the parcel will not have the code for the Bundle component when we will call that component 
+                            at that file  only the loaded it's also called the On Demand Loading.......
+
+                            Problem --> In our SPA application if we go to the component which is not bundled right if we click on that react will try to render that 
+                                                    Component which is not there 
+                                Solution--->
+                                                It will take some time to load that component lazyly 
+                                                so react have the suspense component that do some black magic and load the componet and 
+                                                make our code to wait till the compnent is loading and not give any error
+                                                wherever we are doing lazy loading so where we are rendering those compnent
+                                                    we should wrap inside it in the 
+                                                                  <Suspense fallback{}><Bundle></Suspense>
+                                                                  and it will also take the props as the fallback while loading what we want to show or do
+
+       GOOD Practice  -Never Lazy load inside the component but will Lazyly load after the each render cycle and our app might not be the performent {do where we import}
+
+
+
+        
+

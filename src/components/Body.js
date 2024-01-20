@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import { restaurantObject } from "../contant";
 import Shimmer from "./ShimmerUI";  
+import { filterData } from "../utils/helper";
 
 const Body = () => {
   const [restaurant, setRestaurant] = useState([]); // Assuming fetched data will be an array
@@ -15,13 +16,7 @@ const Body = () => {
   }, []); // Empty dependency array ensures it runs once after mounting
   
 
-
-  async function filterData(searchText, restaurant) {
-    const filteredRestaurant = restaurant.filter((res) =>
-      res.name.toLowerCase().includes(searchText.toLowerCase())
-    );
-    return filteredRestaurant;
-  }async function fetchData() {
+    async function fetchData() {
     try {
       const response = await fetch('https://www.swiggy.com/mapi/homepage/getCards?lat=18.1519403&lng=74.5697617');
   
@@ -41,12 +36,14 @@ const Body = () => {
       console.error('Error fetching data:', error);
     }
   }
+
   
 
-  const handleSearch = async () => {
+   const handleSearch = async () => {
     const data = await filterData(searchText, restaurant);
     setfilteredRestaurant(data);
   };
+
 
 
   //Condtional  Rendereing 
