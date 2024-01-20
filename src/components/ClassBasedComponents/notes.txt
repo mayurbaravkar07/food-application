@@ -1,0 +1,7 @@
+-class based components are the normal class which inherit some property from React.component so it  will not make not appear as class 
+and appear as the class based component
+
+-it has the render method (mandatory) what ever jsx will return it will inject inside the DOM
+
+
+

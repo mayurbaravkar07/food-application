@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Profiler } from "react";
 import ReactDOM from "react-dom/client";
 import "../style.css";
 import { Title, HeaderComponent } from "./components/Header";
@@ -9,7 +9,8 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
-
+import Profile from "./components/ProfileF";
+import ProfileC from "./components/ClassBasedComponents/ProfileC";
 
 //Main App
 const AppLayout = () => {
@@ -35,7 +36,14 @@ const  appRouter=createBrowserRouter([
        },
       {
         path:"/about",
-        element:<About/>
+        element:<About/>,
+        children:[
+          {
+           path:"profile",
+           element:<ProfileC/>
+         }
+      
+      ]
        },
        {
         path:"/contact",
