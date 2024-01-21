@@ -1,85 +1,52 @@
 import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
-import { restaurantObject } from "../contant";
-import Shimmer from "./ShimmerUI";  
+import Shimmer from "./ShimmerUI";
 import { filterData } from "../utils/helper";
+import useRestaurantData from "../utils/CustomHooks/useRestaurantData";
 
 const Body = () => {
-  const [restaurant, setRestaurant] = useState([]); // Assuming fetched data will be an array
+  // Custom Hook
+  const restaurant = useRestaurantData();
   const [searchText, setSearchText] = useState("");
-  const [filteredRestaurant, setfilteredRestaurant] = useState([]);
+  const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
   useEffect(() => {
-    
-    fetchData(); 
-  
-  }, []); // Empty dependency array ensures it runs once after mounting
-  
+    setFilteredRestaurant(restaurant);
+  }, [restaurant]);
 
-    async function fetchData() {
-    try {
-      const response = await fetch('https://www.swiggy.com/mapi/homepage/getCards?lat=18.1519403&lng=74.5697617');
-  
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-  
-      const jsonData = await response.json();
-      console.log('API Response:', jsonData);
-  
-      const restaurantsData = jsonData?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle?.restaurants?.map(restaurant => restaurant.info);
-  
-      // Update state with the array of restaurants
-      setRestaurant(restaurantsData || []);
-      setfilteredRestaurant(restaurantsData || []);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  }
-
-  
-
-   const handleSearch = async () => {
+  const handleSearch = async () => {
     const data = await filterData(searchText, restaurant);
-    setfilteredRestaurant(data);
+    setFilteredRestaurant(data);
   };
 
-
-
-  //Condtional  Rendereing 
-  //if restaturant is empty ==> shimmer ui
-  //if restaurant has the  data then==> actual UI
-  //
-  
-  //early return 
-
-
-  return (restaurant.length===0)?<Shimmer/>:(
+  // Conditional Rendering
+  return (
     <>
-      <div className="searchContainer">
-        <input
-          type="text"
-          className="search-input"
-          placeholder="search "
-          value={searchText}
-          onChange={(e) => {
-            setSearchText(e.target.value);
-          }}
-        />
-        <button
-          className="search-btn"
-          onClick={handleSearch}
-        >
-          Search
-        </button>
-      </div>
+      {filteredRestaurant && filteredRestaurant.length === 0 ? (
+        <Shimmer />
+      ) : (
+        <>
+          <div className="searchContainer">
+            <input
+              type="text"
+              className="search-input"
+              placeholder="search "
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+            />
+            <button className="search-btn" onClick={handleSearch}>
+              Search
+            </button>
+          </div>
 
-      <div className="restaurant-list">
-        {/* Map over the array of restaurants and render each RestaurantCard */}
-        {filteredRestaurant.map((restaurantData, index) => (
-          <RestaurantCard {...restaurantData} key={index} />
-        ))}
-      </div>
+          <div className="restaurant-list">
+            {/* Map over the array of restaurants and render each RestaurantCard */}
+            {filteredRestaurant.map((restaurantData, index) => (
+              <RestaurantCard {...restaurantData} key={index} />
+            ))}
+          </div>
+        </>
+      )}
     </>
   );
 };

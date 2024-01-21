@@ -1,4 +1,4 @@
-import React, { Profiler } from "react";
+import React, { Profiler, Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "../style.css";
 import { Title, HeaderComponent } from "./components/Header";
@@ -11,7 +11,10 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Profile from "./components/ProfileF";
 import ProfileC from "./components/ClassBasedComponents/ProfileC";
+import Shimmer from "./components/ShimmerUI";
+//import Cart from "./components/ClassBasedComponents/Cart";
 
+const  Cart =lazy(()=>import('./components/ClassBasedComponents/Cart'));
 //Main App
 const AppLayout = () => {
   return (
@@ -50,6 +53,10 @@ const  appRouter=createBrowserRouter([
         element:<Contact/>
        },
        {
+        path:"/cart",
+        element:<Suspense fallback={<Shimmer/>}><Cart/></Suspense>
+       },
+       {
         path:"/restaurant/:id",
         element:<RestaurantMenu/>
        },
@@ -59,10 +66,6 @@ const  appRouter=createBrowserRouter([
 
    },
 
-
-
-   
-   
  
   ]);
 

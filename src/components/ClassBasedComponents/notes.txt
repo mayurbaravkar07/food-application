@@ -2,6 +2,26 @@
 and appear as the class based component
 
 -it has the render method (mandatory) what ever jsx will return it will inject inside the DOM
+-inside the constructor we pass the props
+-inside the constructor we declare the state of our compnents
+
+-React class Based Component Lifecycle  ---->
+   works in two PHASES
+             Render  Phase-In this phase the react call the constructors and renders the things if inside another child 
+                                           components are their then it will trigger the react-lifecycle for that components 
+             Commit Phase- In the commit phase what happens react will start the actually updating the DOM 
+             
+      first it will call the constructor
+       Then it will render things --> 
+            if inside render another comonents rendered it will complete the render phase and the commit phase for all that component
+            if  multiple children components are there then it will batch up the render phase and after that batch up the commit phase of that comonents togethe
+             why react is doing that 
+                                  DOM Manipulation is costly operation that's why it first batches the render phase and commit phase together of the children
+
+Why Commit did mount is best call to make api call
+    React is fast because it first renders the laylouts of the comonents and after that fetches the data and fills after that  that above we have seen that 
+    it makes react not to wait for the apis to give the and load after that user experience will also be harmed  if data might getting much time to get 
+    component did mount or the use effect hook is best call to make the api call because after render it will call this functions
 
 
-
+    inside useEffect()  there is return ()=>{} fn avilable and this function is called at the time of the unmounting things 

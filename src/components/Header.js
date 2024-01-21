@@ -19,7 +19,7 @@ export const HeaderComponent = () => {
         <li><Link  to="/">Home</Link></li>
           <li><Link  to="/about">About</Link></li>
           <li><Link  to="/contact">contact</Link></li>
-          <li>Cart</li>
+          <li><Link to="/cart">Cart</Link></li>
         </ul>
       </div>
     </div>
