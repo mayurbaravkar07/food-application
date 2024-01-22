@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./ShimmerUI";
-import { filterData } from "../utils/helper";
+import { filterData } from "../utils/helper";  // Make sure filterData is imported
 import useRestaurantData from "../utils/CustomHooks/useRestaurantData";
 
 const Body = () => {
   // Custom Hook
-  const restaurant = useRestaurantData();
+  const restaurant = useRestaurantData([]);
   const [searchText, setSearchText] = useState("");
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
@@ -22,24 +22,29 @@ const Body = () => {
   // Conditional Rendering
   return (
     <>
+   {console.log(restaurant)}
       {filteredRestaurant && filteredRestaurant.length === 0 ? (
         <Shimmer />
       ) : (
         <>
-          <div className="searchContainer">
+          <div className="searchContainer p-4 m-4">
             <input
               type="text"
-              className="search-input"
-              placeholder="search "
+              className="border border-s-pink-50id rounded-lg hover:bg-gray-100 p-2"
+              placeholder="Search"
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
             />
-            <button className="search-btn" onClick={handleSearch}>
+            <button
+              className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 focus:outline-white focus:ring focus:border-blue-300 m-4"
+              onClick={handleSearch}
+            >
               Search
             </button>
           </div>
 
-          <div className="restaurant-list">
+
+          <div className="flex flex-wrap px-4">
             {/* Map over the array of restaurants and render each RestaurantCard */}
             {filteredRestaurant.map((restaurantData, index) => (
               <RestaurantCard {...restaurantData} key={index} />

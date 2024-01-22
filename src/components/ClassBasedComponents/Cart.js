@@ -32,9 +32,9 @@ class Cart extends React.Component {
     return (
       <>
         <div>
-          <h1>Cart Items</h1>
+          <h1 className="font-bold py-4 text-2xl ">Cart Items</h1>
         </div>
-        <div className="restaurant-list">
+        <div className="flex flex-wrap px-4">
           {this.state.cartItems.map((restaurantData, index) => (
             <RestaurantCard {...restaurantData} key={index} />
           ))}

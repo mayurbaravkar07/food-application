@@ -1,0 +1,2 @@
+---talwind css is light weight because fot every class it does not import the class explicitly it will import one and use it everywhere
+   - we can write the css on the fly in the field of the className 
