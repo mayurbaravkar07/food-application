@@ -3,7 +3,7 @@ import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./ShimmerUI";
 import { filterData } from "../utils/helper";  // Make sure filterData is imported
 import useRestaurantData from "../utils/CustomHooks/useRestaurantData";
-
+import { Link } from "react-router-dom";
 const Body = () => {
   // Custom Hook
   const restaurant = useRestaurantData([]);
@@ -12,6 +12,8 @@ const Body = () => {
 
   useEffect(() => {
     setFilteredRestaurant(restaurant);
+    console.log("------");
+    //console.log(restaurant);
   }, [restaurant]);
 
   const handleSearch = async () => {
@@ -47,7 +49,7 @@ const Body = () => {
           <div className="flex flex-wrap px-4">
             {/* Map over the array of restaurants and render each RestaurantCard */}
             {filteredRestaurant.map((restaurantData, index) => (
-              <RestaurantCard {...restaurantData} key={index} />
+              <Link to={"/restaurant/"+restaurantData.id}><RestaurantCard {...restaurantData} key={index} /></Link>
             ))}
           </div>
         </>

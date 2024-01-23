@@ -15,7 +15,7 @@ const useRestaurantData = () => {
         console.log('API Response:', jsonData);
        // const nadbramhaIdliInfo = apiResponse?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle?.restaurants?.[0]?.info;
 
-        const restaurantsData = jsonData?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants?.map(restaurant => restaurant.info);
+        const restaurantsData = jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants?.map(restaurant => restaurant.info);
 
         // Update state with the array of restaurants
         setRestaurant(restaurantsData || []);
