@@ -10,6 +10,7 @@ const RestaurantMenu = () => {
   console.log(id);
   const URL=`${MENU_API_URL}${id}`
   const [resInfo, setResInfo] = useState(null);
+  const [showIndex,setShowIndex]=useState(null)
 
   useEffect(() => {
     getRestaurantMenu();
@@ -58,8 +59,11 @@ const RestaurantMenu = () => {
         </ul> */}
 
         {/**Categories for the accordion */}
-            {categories.map((category)=>(
-            <RestaurantCategory data={category?.card?.card}/>
+            {categories.map((category,index)=>(
+              //controlled Component
+            <RestaurantCategory key={category?.card?.title} data={category?.card?.card}
+            showItems={index==showIndex ?true :false}
+            setShowIndex={()=>setShowIndex(index)}/>
             ))}
   </div>
   

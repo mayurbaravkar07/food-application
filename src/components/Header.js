@@ -26,7 +26,7 @@ export const HeaderComponent = () => {
         <ul className="flex p-4 m-4">
         <li className="px-4"><Link  to="/">Home</Link></li>
           <li className="px-4"><Link  to="/about">About</Link></li>
-          <li className="px-4"><Link  to="/contact">contact</Link></li>
+          <li className="px-4"><Link  to="/contact">Contact</Link></li>
           <li className="px-4"><Link to="/cart">Cart</Link></li>
         </ul>
       </div>

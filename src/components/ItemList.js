@@ -12,7 +12,7 @@ const ItemList = ({ items }) => {
               <div className="py-2 font-medium text-base">
                 <span>{item?.card?.info?.name}</span>
                 <br />
-                <span>₹{item?.card?.info?.price}</span>
+                <span>₹{item?.card?.info?.price/100}</span>
               </div>
               <p className="text-sm text-gray-600">{item?.card?.info?.description}</p>
             </div>
