@@ -1,0 +1,19 @@
+-Redux is a state management library is used to manage the states in our application
+-Redux and React are seprate libraries
+-Redux  Provides the the easy debugging in our application
+
+Redux is 
+     Predicatable -application behaves consistent manner,run in different environment ,are easy to test
+
+     Centrailsed -Centralised you application's state and logic enables powerful capabilities like redo/undo ,       state  persistence
+
+     Debugaable-it is easy to trace when ,where why ,and how is the state go changed
+
+     Flexible- it works with ui layer has a large ecocsystem of addons to fit your needs
+     
+
+
+
+Redux toolkit is the standard way to write the redux
+
+

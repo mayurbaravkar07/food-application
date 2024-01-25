@@ -49,7 +49,7 @@ const Body = () => {
           <div className="flex flex-wrap px-4">
             {/* Map over the array of restaurants and render each RestaurantCard */}
             {filteredRestaurant.map((restaurantData, index) => (
-              <Link to={"/restaurant/"+restaurantData.id}><RestaurantCard {...restaurantData} key={index} /></Link>
+              <Link to={"/restaurant/"+restaurantData.id}><RestaurantCard {...restaurantData} key={index+Math.random()} /></Link>
             ))}
           </div>
         </>

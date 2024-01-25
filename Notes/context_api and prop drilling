@@ -1,0 +1,40 @@
+prop drilling ---> React has the one way data flow in the react applications form parent to its childdren Prop Drilling it is the concept  of the data to pass from the parent to intermediate childrens to leaf so leaf component have the access over that data is called as the prop  drilling
+
+
+In the react appilication this might be possible that  we might need some data should globally avilable  in many places in the react  application  so we need to find the way on which the data should always avilable globally
+
+Solution to this Problem is the -->
+Context-API
+    
+    - we store the context information in the utils of the section 
+    - react provides us the createContext() on which we can greate the object that might be passed in throught the app
+
+    Two ways to consume the userContext()
+
+            1-   Consumes in - Functional Based Component 
+                    And wherever if have to use that information react provides  the hooks for that and the hook is called the 
+                    userContext() we have to pass the data to this hook and the data is avilabe with in that scope of the component...
+
+            2-  Consumes in - Class Based Component
+                <UserConext.Consumer>
+                //Consume here the the userContext JSX will receives the callback function and  the data is passed over there
+                    { (data)=>(console.log(data))}
+
+                <UserConext.Consumer/> 
+
+
+
+if we want to give the information to our created context 
+     -Then we have the <UserContext.Provider value ={{CreatedContextinfo: infoThatweWant to provide}}>
+                                    </UserConext.Provider>
+
+    --Whatever the components we want to have the information we want to give it avilable within that component 
+        we should wrap it by  <UserContext.Provider value ={{CreatedContextinfo: infoThatweWant to provide}}> </UserConext.Provider>
+
+    -Whatever by using this we can override the data as well
+    -if we did not provided the context then it will have the default data that we have provided at the time creating    the context
+
+
+
+
+

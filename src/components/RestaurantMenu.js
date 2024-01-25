@@ -61,7 +61,7 @@ const RestaurantMenu = () => {
         {/**Categories for the accordion */}
             {categories.map((category,index)=>(
               //controlled Component
-            <RestaurantCategory key={category?.card?.title} data={category?.card?.card}
+            <RestaurantCategory key={category?.card?.id} data={category?.card?.card}
             showItems={index==showIndex ?true :false}
             setShowIndex={()=>setShowIndex(index)}/>
             ))}

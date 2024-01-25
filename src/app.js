@@ -13,15 +13,20 @@ import Profile from "./components/ProfileF";
 import ProfileC from "./components/ClassBasedComponents/ProfileC";
 import Shimmer from "./components/ShimmerUI";
 //import Cart from "./components/ClassBasedComponents/Cart";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 
-const  Cart =lazy(()=>import('./components/ClassBasedComponents/Cart'));
+const  CartC =lazy(()=>import('./components/ClassBasedComponents/CartC'));
 //Main App
 const AppLayout = () => {
   return (
     <>
+      <Provider store={appStore}>
       <HeaderComponent />
      <Outlet/>
       <Footer />
+      </Provider>
     </>
   );
 };

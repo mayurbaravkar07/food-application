@@ -1,6 +1,15 @@
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
+
 const ItemList = ({ items }) => {
     const ImageUrl = 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/';
   
+    const dispatch=useDispatch();
+
+    const handleAddItem=(item)=>{
+      //Dispatch an action over here
+      dispatch(addItem(item));
+    }
     return (
       <div>
         {items.map((item) => (
@@ -21,7 +30,8 @@ const ItemList = ({ items }) => {
               
             {item?.card?.info?.imageId && (
   <div className="absolute">
-    <button className="p-2 bg-black shadow-lg mx-8 my-auto rounded-md text-white font-medium">ADD</button>
+    <button className="p-2 bg-black shadow-lg mx-8 my-auto rounded-md text-white font-medium" 
+    onClick={()=>handleAddItem(item)}>ADD</button>
   </div>
 )}
 
