@@ -1,10 +1,10 @@
-# Spicy Pricey
+# Food Delevering App
 
-Welcome to Spicy Pricey, your go-to solution for convenient and delicious food delivery! This web application is built with React for the frontend, Redux Toolkit for state management, and Firebase for authentication. Whether you're craving pizza, sushi, or something sweet, Spicy Pricey has you covered.
+Welcome to Food Delevering App, your go-to solution for convenient and delicious food delivery! This web application is built with React for the frontend, Redux Toolkit for state management, and Firebase for authentication. Whether you're craving pizza, sushi, or something sweet, App has you covered.
 
 ## Hosted Link
 
-Check out the hosted version of Spicy Pricey at [https://spicy-pricey-food-delivery.vercel.app](https://spicy-pricey-food-delivery.vercel.app).
+Check out the hosted version  at []().
 
 ## Features
 
@@ -35,8 +35,8 @@ Make sure you have Node.js and npm installed on your machine.
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/R3MODAS/Spicy-Pricey-Food-Delivery-App.git
-cd Spicy-Pricey-Food-Delivery-App
+git clone https://github.com/mayurbaravkar07/food-application.git
+cd food-application
 ```
 
 2. Install dependencies:
@@ -51,11 +51,11 @@ npm install
 npm run dev
 ```
 
-Visit `http://localhost:5173` in your browser to see Spicy Pricey in action.
+Visit `http://localhost:5173` in your browser to see App in Action in action.
 
 ## Contributing
 
-We welcome contributions! If you'd like to contribute to Spicy Pricey, please follow our [contribution guidelines](CONTRIBUTING.md).
+We welcome contributions! If you'd like to contribute to repo, please follow our [contribution guidelines](CONTRIBUTING.md).
 
 ## License
 
@@ -63,4 +63,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Thank you for using Foodie Express! If you have any questions or issues, feel free to open an [issue](https://github.com/R3MODAS/Spicy-Pricey-Food-Delivery-App/issues). Enjoy your delicious meals! 🍔🍕🍜
+Thank you for using Foodie Express! If you have any questions or issues, feel free to open an [issue](https://github.com/mayurbaravkar07/food-application.git). Enjoy your delicious meals! 🍔🍕🍜
