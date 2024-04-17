@@ -1,7 +1,12 @@
 async function testApi() {
     try {
-      const response = await fetch('https://www.swiggy.com/mapi/homepage/getCards?lat=18.1519403&lng=74.5697617&page_type=DESKTOP_WEB_LISTING');
-  
+      const response = await fetch('https://proxy.cors.sh/https://www.swiggy.com/mapi/homepage/getCards?lat=18.1519403&lng=74.5697617&page_type=DESKTOP_WEB_LISTING', {
+        headers: {
+          'x-cors-api-key': 'temp_8220d94964386cb24262e97e2d17d706'
+        }
+      })
+
+
       if (response.ok) {
         const data = await response.json();
         console.log(data);
