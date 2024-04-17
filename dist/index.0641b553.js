@@ -35548,11 +35548,11 @@ const About = ()=>{
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: "This is the Namasate React Live Course Course  Chapter 9 and am learning how to define routes in the application"
+                children: "Food Application"
             }, void 0, false, {
                 fileName: "src/components/About.js",
                 lineNumber: 6,
-                columnNumber: 9
+                columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/components/About.js",
