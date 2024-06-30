@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+body {
+    margin: 0;
+}
+.login {
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.user-card {
+    padding: 10px;
+    border: 1px solid black;
+}
