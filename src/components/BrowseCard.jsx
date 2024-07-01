@@ -5,31 +5,6 @@ import RestaurantCard from './RestaurantCard';
 import { CATEGORY_CDN_URL } from '../utils/constants';
 
 const BrowseCard = ({ data }) => {
-    if (data?.card?.card?.title && data?.card?.card?.brands) {
-        return (
-            <div>
-                <Title title={data.card.card.title} />
-                <div className="border-b-2 border-gray-200 pb-7">
-                    <div className="grid gap-2 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 overflow-wrap-break">
-                        {data.card?.card?.brands.slice(0, 12).map((brand) => (
-                            <div
-                                key={brand.id}
-                                className={`border text-center border-gray-200 px-4 my-2 py-4  rounded overflow-hidden overflow-ellipsis text-nowrap whitespace-nowrap hover:opacity-70 hover:scale-105 cursor-pointer`}
-                            >
-                                {brand.text}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        );
-    }
-    if (
-        data?.card?.card?.title &&
-        data?.card?.card?.id !== 'app_install_links'
-    ) {
-        return <Title title={data.card.card.title} />;
-    }
     if (
         data?.card?.card?.gridElements?.infoWithStyle?.info &&
         data?.card?.card?.header
@@ -78,15 +53,11 @@ const BrowseCard = ({ data }) => {
                                         to={`/restaurants/${restaurant.info.id}`}
                                         key={restaurant.info.id}
                                     >
-                                        {restaurant?.promoted ? (
-                                            <RestaurantCardPromoted
-                                                resData={restaurant}
-                                            />
-                                        ) : (
+                                      
                                             <RestaurantCard
                                                 resData={restaurant}
                                             />
-                                        )}
+                                        
                                     </Link>
                                 )
                             )}
@@ -103,17 +74,14 @@ const BrowseCard = ({ data }) => {
                     {data.card.card.gridElements.infoWithStyle.restaurants.map(
                         (restaurant) => (
                             <Link
-                                // className="w-[100%] sm:w-[32%]  lg:w-[23%] xl:w-[18%]"
+                               
                                 to={`/restaurants/${restaurant.info.id}`}
                                 key={restaurant.info.id}
                             >
-                                {restaurant?.promoted ? (
-                                    <RestaurantCardPromoted
-                                        resData={restaurant}
-                                    />
-                                ) : (
+                              
+                                
                                     <RestaurantCard resData={restaurant} />
-                                )}
+                                
                             </Link>
                         )
                     )}

@@ -7,7 +7,6 @@ import Cart from './components/Cart';
 import Header from './components/Header';
 import Shimmer from './components/Shimmer';
 import './index.css';
-import UserContext from './utils/UserContext';
 import appStore from './utils/appStore';
 import Error from './components/Error';
 import { Toaster } from 'react-hot-toast';
@@ -21,21 +20,17 @@ const RestaurantMenu = lazy(() => import('./components/RestaurantMenu'));
 const AppLayout = () => {
     const [userName, setUserName] = useState();
 
-    useEffect(() => {
-        setUserName({ name: ' Wenodh' });
-    }, []);
+  
     return (
         <Provider store={appStore}>
-            <UserContext.Provider
-                value={{ loggedInUser: userName, setUserName }}
-            >
+            
                 <Header />
                 <div className="container mx-auto px-2 sm:px-4 ">
                     <Outlet />{' '}
                 </div>
                 {/* <SpeedInsights /> */}
                 <Toaster position="bottom-center" reverseOrder={false} />
-            </UserContext.Provider>
+           
         </Provider>
     );
 };

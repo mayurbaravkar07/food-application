@@ -2,13 +2,11 @@ import { useContext, useState } from 'react';
 import logo from '../logo.png';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../utils/useOnlineStatus';
-import UserContext from '../utils/UserContext';
 import { useSelector } from 'react-redux';
 import toast from 'react-hot-toast';
 const Header = () => {
     const onlineStatus = useOnlineStatus();
     const [btnName, setBtnName] = useState('Login');
-    const { loggedInUser } = useContext(UserContext);
     const cartItems = useSelector((store) => store.cart.items);
     const [isContentVisible, setIsContentVisible] = useState(true);
 

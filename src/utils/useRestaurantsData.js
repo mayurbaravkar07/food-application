@@ -21,6 +21,7 @@ const useRestaurantsData = () => {
 
             const json = await response.json();
             const restaurantData = json?.data?.cards;
+            console.log(restaurantData);
             setListOfResData(restaurantData);
         } catch (error) {
             setError('Error fetching data');

@@ -7,10 +7,11 @@ import RestaurantCard from './RestaurantCard';
 import Shimmer from './Shimmer';
 
 const Collections = () => {
-    const { collectionId } = useParams();
+   
     const { state } = useLocation();
     const [headerDetails, setHeaderDetails] = useState(null);
     const [resDetails, setResDetails] = useState([]);
+
     useEffect(() => {
         fetchCollectionData();
     }, []);
@@ -21,6 +22,7 @@ const Collections = () => {
             );
             const json = await response.json();
             const data = json.data.cards;
+            console.log(data[0]);
             setHeaderDetails(data[0]);
             setResDetails(
                 data.filter(
@@ -41,6 +43,8 @@ const Collections = () => {
             );
         }
     };
+
+
     if (!headerDetails) return <Shimmer />;
     return (
         <div className="pt-6">
