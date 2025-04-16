@@ -63,9 +63,9 @@ const Home = () => {
     e.target.classList.add("active")
   }
 
-  if (AllRestaurants.length <= 0) {
-    return <ShimmerHome />
-  }
+  // if (AllRestaurants.length <= 0) {
+  //   return <ShimmerHome />
+  // }
 
   return (
     <div className="container mx-auto mt-24 mb-10 px-2 sm:px-10 overflow-x-hidden">
